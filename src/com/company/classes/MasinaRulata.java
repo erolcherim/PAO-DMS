@@ -12,6 +12,18 @@ public class MasinaRulata extends Masina {
         this.rulaj = rulaj;
     }
 
+    @Override
+    public String toString() {
+        return "MasinaRulata{" +
+                ", masinaId=" + masinaId +
+                ", producator='" + producator + '\'' +
+                ", model='" + model + '\'' +
+                ", capacitateCilindrica=" + capacitateCilindrica +
+                ", anFabricatie=" + anFabricatie +
+                ", rulaj=" + rulaj +
+                ", pret=" + pret;
+    }
+
     public int getRulaj() {
         return this.rulaj;
     }
@@ -20,7 +32,5 @@ public class MasinaRulata extends Masina {
         this.rulaj = rulaj;
     }
 
-    public String toString() {
-        return "MasinaRulata{rulaj=" + this.rulaj + ", masinaId=" + this.masinaId + ", producator='" + this.producator + "', model='" + this.model + "', capacitateCilindrica=" + this.capacitateCilindrica + ", pret=" + this.pret + ", anFabricatie=" + this.anFabricatie + "}";
-    }
+
 }

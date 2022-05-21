@@ -5,18 +5,18 @@ public class Info {
     private int infoId;
     private String nume;
     private String prenume;
-    private String data_nasterii;
-    private String numar_telefon;
+    private String dataNasterii;
+    private String numarTelefon;
     private String adresa;
 
     public Info() {
     }
 
-    public Info(String nume, String prenume, String data_nasterii, String numar_telefon, String adresa) {
+    public Info(String nume, String prenume, String dataNasterii, String numarTelefon, String adresa) {
         this.nume = nume;
         this.prenume = prenume;
-        this.data_nasterii = data_nasterii;
-        this.numar_telefon = numar_telefon;
+        this.dataNasterii = dataNasterii;
+        this.numarTelefon = numarTelefon;
         this.adresa = adresa;
         this.setInfoId(++counter);
     }
@@ -45,20 +45,20 @@ public class Info {
         this.prenume = prenume;
     }
 
-    public String getData_nasterii() {
-        return this.data_nasterii;
+    public String getdataNasterii() {
+        return this.dataNasterii;
     }
 
-    public void setData_nasterii(String data_nasterii) {
-        this.data_nasterii = data_nasterii;
+    public void setdataNasterii(String dataNasterii) {
+        this.dataNasterii = dataNasterii;
     }
 
-    public String getNumar_telefon() {
-        return this.numar_telefon;
+    public String getnumarTelefon() {
+        return this.numarTelefon;
     }
 
-    public void setNumar_telefon(String numar_telefon) {
-        this.numar_telefon = numar_telefon;
+    public void setnumarTelefon(String numarTelefon) {
+        this.numarTelefon = numarTelefon;
     }
 
     public String getAdresa() {
@@ -70,6 +70,6 @@ public class Info {
     }
 
     public String toString() {
-        return "Info{nume='" + this.nume + "', prenume='" + this.prenume + "', data_nasterii='" + this.data_nasterii + "', numar_telefon='" + this.numar_telefon + "', adresa='" + this.adresa + "'}";
+        return "Info{nume='" + this.nume + "', prenume='" + this.prenume + "', dataNasterii='" + this.dataNasterii + "', numarTelefon='" + this.numarTelefon + "', adresa='" + this.adresa + "'}";
     }
 }
