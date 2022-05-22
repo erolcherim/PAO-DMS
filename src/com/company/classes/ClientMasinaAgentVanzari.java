@@ -7,7 +7,6 @@ public class ClientMasinaAgentVanzari {
     private Masina masina;
     private AgentVanzari agentVanzari;
     private int pret;
-
     public ClientMasinaAgentVanzari() {
     }
 
@@ -27,6 +26,17 @@ public class ClientMasinaAgentVanzari {
         ClientMasinaAgentVanzari.counter = counter;
     }
 
+    @Override
+    public String toString() {
+        return "ClientMasinaAgentVanzari{" +
+                "clientMasinaId=" + clientMasinaId +
+                ", client=" + client +
+                ", masina=" + masina +
+                ", agentVanzari=" + agentVanzari +
+                ", pret=" + pret +
+                '}';
+    }
+
     public AgentVanzari getAgentVanzari() {
         return agentVanzari;
     }
@@ -44,7 +54,7 @@ public class ClientMasinaAgentVanzari {
     }
 
     private int calculeazaPret(){
-        int pret = 0;
+        int pret;
         if (this.masina instanceof MasinaNoua){
             pret = this.masina.getPret() - ((MasinaNoua)this.masina).getReducereRabla();
         }
@@ -78,7 +88,5 @@ public class ClientMasinaAgentVanzari {
         this.masina = masina;
     }
 
-    public String toString() {
-        return "ClientMasina{clientMasinaId=" + this.clientMasinaId + ", client=" + this.client + ", masina=" + this.masina + ", pret=" + this.pret + "}";
-    }
+
 }
