@@ -10,7 +10,7 @@ public class Masina {
     public int capacitateCilindrica;
     public int pret;
     public int anFabricatie;
-    private Set<ClientMasina> clientMasinaSet;
+    private Set<ClientMasinaAgentVanzari> clientMasinaAgentVanzariSet;
 
     public Masina(String producator, String model, int capacitateCilindrica, int pret, int anFabricatie) {
         this.producator = producator;
@@ -73,6 +73,6 @@ public class Masina {
     }
 
     public String toString() {
-        return "Masina{masinaId=" + this.masinaId + ", producator='" + this.producator + "', model='" + this.model + "', capacitateCilindrica=" + this.capacitateCilindrica + ", pret=" + this.pret + ", anFabricatie=" + this.anFabricatie + ", clientMasinaSet=" + this.clientMasinaSet + "}";
+        return "Masina{masinaId=" + this.masinaId + ", producator='" + this.producator + "', model='" + this.model + "', capacitateCilindrica=" + this.capacitateCilindrica + ", pret=" + this.pret + ", anFabricatie=" + this.anFabricatie + ", clientMasinaSet=" + this.clientMasinaAgentVanzariSet + "}";
     }
 }

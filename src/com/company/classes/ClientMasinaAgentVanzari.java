@@ -1,17 +1,38 @@
 package com.company.classes;
 
-public class ClientMasina {
+public class ClientMasinaAgentVanzari {
     private static int counter = 0;
     private int clientMasinaId;
     private Client client;
     private Masina masina;
+    private AgentVanzari agentVanzari;
+    private int pret;
+
+    public ClientMasinaAgentVanzari() {
+    }
+
+    public ClientMasinaAgentVanzari(Client client, Masina masina, AgentVanzari agentVanzari) {
+        this.client = client;
+        this.masina = masina;
+        this.agentVanzari = agentVanzari;
+        this.pret = calculeazaPret();
+        this.setClientMasinaId(++counter);
+    }
 
     public static int getCounter() {
         return counter;
     }
 
     public static void setCounter(int counter) {
-        ClientMasina.counter = counter;
+        ClientMasinaAgentVanzari.counter = counter;
+    }
+
+    public AgentVanzari getAgentVanzari() {
+        return agentVanzari;
+    }
+
+    public void setAgentVanzari(AgentVanzari agentVanzari) {
+        this.agentVanzari = agentVanzari;
     }
 
     public int getPret() {
@@ -32,41 +53,29 @@ public class ClientMasina {
 
         return pret;
     }
-    private int pret;
-
 
     public int getClientMasinaId() {
         return this.clientMasinaId;
-    }
-
-    public Client getClient() {
-        return this.client;
-    }
-
-    public Masina getMasina() {
-        return this.masina;
-    }
-
-    public void setClient(Client client) {
-        this.client = client;
-    }
-
-    public void setMasina(Masina masina) {
-        this.masina = masina;
     }
 
     public void setClientMasinaId(int clientMasinaId) {
         this.clientMasinaId = clientMasinaId;
     }
 
-    public ClientMasina() {
+    public Client getClient() {
+        return this.client;
     }
 
-    public ClientMasina(Client client, Masina masina) {
+    public void setClient(Client client) {
         this.client = client;
+    }
+
+    public Masina getMasina() {
+        return this.masina;
+    }
+
+    public void setMasina(Masina masina) {
         this.masina = masina;
-        this.pret = calculeazaPret();
-        this.setClientMasinaId(++counter);
     }
 
     public String toString() {

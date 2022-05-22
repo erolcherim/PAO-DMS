@@ -6,7 +6,7 @@ public class Client {
     private static int counter = 0;
     private int clientId;
     private Info info;
-    private Set<ClientMasina> clientMasinaSet;
+    private Set<ClientMasinaAgentVanzari> clientMasinaAgentVanzariSet;
 
     public Client(Info info) {
         this.info = info;
