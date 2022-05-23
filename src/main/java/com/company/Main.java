@@ -1,9 +1,7 @@
 package com.company;
 
 import com.company.classes.*;
-import com.company.repository.AgentVanzariRepository;
-import com.company.repository.ClientRepository;
-import com.company.repository.InfoRepository;
+import com.company.repository.*;
 import com.company.services.LoggerService.LoggerService;
 import com.sun.tools.attach.AgentInitializationException;
 
@@ -19,15 +17,16 @@ public class Main{
         InfoRepository infoRepo = new InfoRepository();
         ClientRepository clientRepo = new ClientRepository();
         AgentVanzariRepository agentRepo = new AgentVanzariRepository();
+        MasinaRepository masinaRepo = new MasinaRepository();
+        MasinaNouaRepository masinaNouaRepo = new MasinaNouaRepository();
+        MasinaRulataRepository masinaRulataRepo = new MasinaRulataRepository();
 
         infoRepo.createTable();
         clientRepo.createTable();
         agentRepo.createTable();
-
-        Info info = new Info("Erol", "Cherim", "1999-10-01", "2", "3");
-        infoRepo.createInfo(info);
-
-
+        masinaRepo.createTable();
+        masinaNouaRepo.createTable();
+        masinaRulataRepo.createTable();
 
     }
 }
