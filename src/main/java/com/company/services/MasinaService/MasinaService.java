@@ -33,6 +33,7 @@ public class MasinaService {
         Masina masinaCurenta = (Masina) new MasinaNoua(producator, model, capacitateCilindrica, pret, anFabricatie, reducereRabla, timpAsteptare);
         masini.add(masinaCurenta);
 
+
     }
 
     public static void addMasinaRulata(){
@@ -53,6 +54,24 @@ public class MasinaService {
 
         Masina masinaCurenta = (Masina) new MasinaRulata(producator, model, capacitateCilindrica, pret, anFabricatie, rulaj);
         masini.add(masinaCurenta);
+    }
+
+    public static Masina addMasina(){
+        System.out.println("Introduceti datele pentru o masina noua");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduceti producatorul");
+        String producator = scanner.nextLine();
+        System.out.println("Introduceti modelul");
+        String model = scanner.nextLine();
+        System.out.println("Introduceti capacitatea cilindrica (cm3)");
+        int capacitateCilindrica = scanner.nextInt();
+        System.out.println("Introduceti anul de fabricatie");
+        int anFabricatie = scanner.nextInt();
+        System.out.println("Introduceti pretul(eur)");
+        int pret = scanner.nextInt();
+
+        Masina masinaCurenta = new Masina(producator, model, capacitateCilindrica, pret, anFabricatie);
+        return masinaCurenta;
     }
 
     public static void stergeMasina(){
