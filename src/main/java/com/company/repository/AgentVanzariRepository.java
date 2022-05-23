@@ -5,7 +5,16 @@ import com.company.config.DatabaseConfiguration;
 import java.sql.*;
 
 public class AgentVanzariRepository {
+    //singleton
+    static AgentVanzariRepository agentVanzariRepo = new AgentVanzariRepository();
 
+    private AgentVanzariRepository(){};
+
+    public static AgentVanzariRepository getInstance(){
+        return agentVanzariRepo;
+    }
+
+    //DDL + CRUD
     public void createTable(){
         String createTableSql = "CREATE TABLE IF NOT EXISTS agenti " +
                 "(agentId int PRIMARY KEY AUTO_INCREMENT, " +

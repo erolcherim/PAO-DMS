@@ -5,6 +5,17 @@ import com.company.config.DatabaseConfiguration;
 import java.sql.*;
 
 public class MasinaNouaRepository {
+    //singleton
+
+    static MasinaNouaRepository masinaNouaRepo = new MasinaNouaRepository();
+
+    private MasinaNouaRepository(){};
+
+    public static MasinaNouaRepository getInstance(){
+        return masinaNouaRepo;
+    }
+
+    //DDL + CRUD
     public void createTable(){
         String createTableSql = "CREATE TABLE IF NOT EXISTS masina_noua " +
                 "(masinaId int PRIMARY KEY AUTO_INCREMENT, " +

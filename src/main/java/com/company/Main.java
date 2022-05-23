@@ -14,12 +14,13 @@ public class Main{
 //        meniu.showMeniu();
 
 //pentru etapa 3
-        InfoRepository infoRepo = new InfoRepository();
-        ClientRepository clientRepo = new ClientRepository();
-        AgentVanzariRepository agentRepo = new AgentVanzariRepository();
-        MasinaRepository masinaRepo = new MasinaRepository();
-        MasinaNouaRepository masinaNouaRepo = new MasinaNouaRepository();
-        MasinaRulataRepository masinaRulataRepo = new MasinaRulataRepository();
+        InfoRepository infoRepo = InfoRepository.getInstance();
+        ClientRepository clientRepo = ClientRepository.getInstance();
+        AgentVanzariRepository agentRepo = AgentVanzariRepository.getInstance();
+        MasinaRepository masinaRepo = MasinaRepository.getInstance();
+        MasinaNouaRepository masinaNouaRepo = MasinaNouaRepository.getInstance();
+        MasinaRulataRepository masinaRulataRepo = MasinaRulataRepository.getInstance();
+        ClientMasinaAgentVanzariRepository clientMasinaAgentVanzariRepo = ClientMasinaAgentVanzariRepository.getInstance();
 
         infoRepo.createTable();
         clientRepo.createTable();
@@ -27,6 +28,8 @@ public class Main{
         masinaRepo.createTable();
         masinaNouaRepo.createTable();
         masinaRulataRepo.createTable();
+        clientMasinaAgentVanzariRepo.createTable();
+
 
     }
 }

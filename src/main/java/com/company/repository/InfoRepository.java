@@ -6,6 +6,14 @@ import com.company.classes.Info;
 import com.company.config.DatabaseConfiguration;
 
 public class InfoRepository {
+
+    static InfoRepository infoRepo = new InfoRepository();
+
+    private InfoRepository(){};
+
+    public static InfoRepository getInstance(){
+        return infoRepo;
+    }
     public void createTable(){
         String createTableSql = "CREATE TABLE IF NOT EXISTS info " +
                 "(infoId int PRIMARY KEY AUTO_INCREMENT, " +

@@ -2,11 +2,22 @@ package com.company.repository;
 
 import com.company.classes.Client;
 import com.company.classes.Info;
+import com.company.classes.Menu;
 import com.company.config.DatabaseConfiguration;
 
 import java.sql.*;
 
 public class ClientRepository {
+    //singleton
+    static ClientRepository clientRepo = new ClientRepository();
+
+    private ClientRepository(){};
+
+    public static ClientRepository getInstance(){
+        return clientRepo;
+    }
+
+    //DDL + CRUD
     public void createTable(){
         String createTableSql = "CREATE TABLE IF NOT EXISTS clienti " +
                 "(clientId int PRIMARY KEY AUTO_INCREMENT, " +

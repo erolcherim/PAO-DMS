@@ -5,6 +5,15 @@ import com.company.config.DatabaseConfiguration;
 import java.sql.*;
 
 public class MasinaRulataRepository {
+    //singleton
+    static MasinaRulataRepository masinaRulataRepo = new MasinaRulataRepository();
+
+    private MasinaRulataRepository(){};
+
+    public static MasinaRulataRepository getInstance(){
+        return masinaRulataRepo;
+    }
+    //DDL + DML
     public void createTable(){
         String createTableSql = "CREATE TABLE IF NOT EXISTS masina_rulata " +
                 "(masinaId int PRIMARY KEY AUTO_INCREMENT, " +

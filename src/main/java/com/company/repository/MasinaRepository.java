@@ -10,6 +10,15 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class MasinaRepository {
+    //singleton
+    static MasinaRepository masinaRepo = new MasinaRepository();
+
+    private MasinaRepository(){};
+
+    public static MasinaRepository getInstance(){
+        return masinaRepo;
+    }
+    //DDL + DML
     public void createTable(){
         String createTableSql = "CREATE TABLE IF NOT EXISTS masina " +
                 "(masinaId int PRIMARY KEY AUTO_INCREMENT, " +

@@ -15,7 +15,6 @@ public class Menu {
     static Menu meniu = new Menu();
     private Menu(){
     }
-
     public static Menu getInstance(){
         return meniu;
     }
