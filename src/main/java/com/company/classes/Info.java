@@ -4,6 +4,7 @@ public class Info {
     private static int counter = 0;
     private int infoId;
     private String nume;
+
     private String prenume;
     private String dataNasterii;
     private String numarTelefon;

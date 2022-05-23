@@ -37,7 +37,7 @@ public class ClientService{
         for (int i = 0; i < clienti.size(); i++) {
             if (clienti.get(i).getId() == idClientDeSters)
                 System.out.println(String.format("Client-ul cu id-ul %s a fost sters", i + 1));
-            clienti.remove(i);
+                clienti.remove(i);
         }
     }
 

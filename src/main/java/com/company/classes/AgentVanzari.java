@@ -5,9 +5,9 @@ public class AgentVanzari {
     private Info info;
     private int salariu;
     private int aniExperienta;
-    private int comision;
+    private float comision;
     private int id;
-    public AgentVanzari(Info info, int salariu, int aniExperienta, int comision) {
+    public AgentVanzari(Info info, int salariu, int aniExperienta, float comision) {
         this.info = info;
         this.salariu = salariu;
         this.aniExperienta = aniExperienta;
@@ -61,7 +61,7 @@ public class AgentVanzari {
         this.aniExperienta = aniExperienta;
     }
 
-    public int getComision() {
+    public float getComision() {
         return comision;
     }
 
